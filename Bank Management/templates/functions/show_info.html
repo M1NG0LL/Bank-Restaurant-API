@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Info</title>
+  </head>
+  <body>
+    <h1>Account Info</h1>
+
+    <h2>Name: {{account.name|capfirst}}</h2>
+    <h2>Email: {{account.email}}</h2>
+    <h2>ID: {{account.id}}</h2>
+    <h2>Balance: {{account.balance}}$</h2>
+
+    <span><a href="{% url 'login_page' id=account.id %}">Login page</a></span>
+  </body>
+</html>

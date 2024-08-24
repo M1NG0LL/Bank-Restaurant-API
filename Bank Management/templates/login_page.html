@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login page</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+
+    <h1>Welcome Mr.{{account.name|capfirst}}</h1>
+    <h1>Your Balance = {{account.balance}}$</h1>
+
+    {% comment %} functions {% endcomment %}
+
+    <h2>
+      <span><a href="{% url 'deposit'  id=account.id %}">deposit</a></span>
+      <span><a href="{% url 'withdraw'  id=account.id %}">withdraw</a></span>
+      <span
+        ><a href="{% url 'show_info'  id=account.id %}">Account Info</a></span
+      >
+    </h2>
+
+    <span><a href="{% url 'logout'  id=account.id %}">logout</a></span>
+  </body>
+</html>
