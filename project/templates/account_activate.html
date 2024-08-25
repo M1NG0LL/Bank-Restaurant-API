@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Email Verification</title>
+  </head>
+  <body>
+    <h2>Email Verification</h2>
+
+    {% if error %}
+    <br />
+    <p>{{ error }}</p>
+    <br />
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %}
+      <p>Email: {{account.email}}</p>
+      {{ form.as_p }}
+
+      <button type="submit">Activate</button>
+    </form>
+    <br />
+    <span
+      ><a href="{% url 'resend_activation_code' email=account.email %}"
+        >send another code</a
+      ></span
+    >
+  </body>
+</html>

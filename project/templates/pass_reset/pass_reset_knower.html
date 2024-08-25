@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account knower</title>
+  </head>
+  <body>
+    <h1>Account knower</h1>
+
+    {% if error %}
+    <br />
+    <p>{{ error }}</p>
+    <br />
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+
+      <button type="submit">Activate</button>
+    </form>
+
+    <span><a href="{% url 'login' %}">login</a></span>
+  </body>
+</html>

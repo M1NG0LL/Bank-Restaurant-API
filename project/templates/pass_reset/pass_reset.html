@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reset Passwrod</title>
+  </head>
+  <body>
+    <h2>Reset Passwrod</h2>
+
+    {% if error %}
+    <br />
+    <p>{{ error }}</p>
+    <br />
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+
+      <button type="submit">Reset Passwrod</button>
+    </form>
+  </body>
+</html>

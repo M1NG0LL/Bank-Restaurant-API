@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logout</title>
+  </head>
+  <body>
+    <h1>Logout</h1>
+
+    <h2>You have logged out</h2>
+    <h2>Good bye Mr.{{account.name|capfirst}}</h2>
+
+    <span><a href="{% url 'login' %}">login</a></span>
+  </body>
+</html>
