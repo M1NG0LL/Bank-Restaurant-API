@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework.serializers import ModelSerializer
 from rest_framework.authtoken.models import Token
 
+from Restaurant.models import *
 from bank.models import Account
 
 class UserSerializer(ModelSerializer):
@@ -25,3 +26,23 @@ class BankAccountSerializer(ModelSerializer):
     class Meta:
         model = Account
         fields = ['id', 'name', 'email', 'password', 'password_confirmation', 'is_active']
+        
+class DessertSerializer(ModelSerializer):
+    class Meta:
+        model = Dessert
+        fields = '__all__'
+
+class MainMealSerializer(ModelSerializer):
+    class Meta:
+        model = MainDish
+        fields = '__all__'
+
+class DrinkSerializer(ModelSerializer):
+    class Meta:
+        model = Drink
+        fields = '__all__'
+
+class ReservationSerializer(ModelSerializer):
+    class Meta:
+        model = Reservation
+        fields = '__all__'

@@ -5,6 +5,11 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('Bank_Accounts', views.BankAccountViewsets, basename='bankaccount')
 
+router.register('Restaurant/Maindish', views.MainDishViewsets, basename='Maindish')
+router.register('Restaurant/Dessert', views.DessertViewsets, basename='Dessert')
+router.register('Restaurant/Drink', views.DrinkViewsets, basename='Drink')
+router.register('Restaurant/Reservation', views.ReservationViewsets, basename='Reservation')
+
 urlpatterns = [
     path('viewsets/', include(router.urls)),
 

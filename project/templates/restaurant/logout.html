@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logout</title>
+  </head>
+  <body>
+    <h1>Logout</h1>
+
+    <h1>Welcome Mr.{{reservation.name|capfirst}}</h1>
+    <h1>Total cash = {{reservation.total_cash}}$</h1>
+
+    {% comment %} functions {% endcomment %}
+
+    <div>
+      <span
+        ><a href="{% url 'pay_by_bank'  id=reservation.id %}"
+          >Pay by Bank Accout</a
+        ></span
+      >
+      <br />
+      <span
+        ><a href="{% url 'pay_by_cash'  id=reservation.id %}">Pay Cash</a></span
+      >
+    </div>
+  </body>
+</html>
