@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Reservation</title>
+  </head>
+  <body>
+    <h1>Enter Reservation</h1>
+
+    {% if error %}
+    <br />
+    <p>{{ error }}</p>
+    <br />
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Enter</button>
+    </form>
+
+    <span><a href="{% url 'make_reservation' %}">Make Reservation</a></span>
+  </body>
+</html>

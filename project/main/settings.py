@@ -38,8 +38,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # API part
+    'rest_framework',
+    'rest_framework.authtoken',
+    
+    # My Apps
     'bank',
+    'API',
+    'Restaurant',
 ]
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES':
+    # ['rest_framework.authentication.TokenAuthentication'],
+    # 'DEFAULT_PERMISSION_CLASSES':
+    # ['rest_framework.permissions.IsAuthenticated'],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,5 +145,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'Youremail@gmail.com' 
-EMAIL_HOST_PASSWORD = 'your app password'
+EMAIL_HOST_USER = 'fatahmed1928@gmail.com' 
+EMAIL_HOST_PASSWORD = 'dfbm kfdn ulll hela'

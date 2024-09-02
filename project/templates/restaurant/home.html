@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Home</h1>
+
+    <h1>Welcome Mr.{{reservation.name|capfirst}}</h1>
+
+    {% comment %} functions {% endcomment %}
+
+    <span><a href="{% url 'logout'  id=reservation.id %}">logout</a></span>
+  </body>
+</html>
