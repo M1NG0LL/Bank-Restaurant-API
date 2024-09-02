@@ -11,6 +11,9 @@ router.register('Restaurant/Drink', views.DrinkViewsets, basename='Drink')
 router.register('Restaurant/Reservation', views.ReservationViewsets, basename='Reservation')
 
 urlpatterns = [
+    path('signup/', views.signup),
+    path('My_token/', views.my_token),
+    
     path('viewsets/', include(router.urls)),
 
     path('api-auth', include('rest_framework.urls')),
